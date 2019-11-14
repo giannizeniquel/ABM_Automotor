@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="350.0" prefWidth="600.0" style="-fx-border-color: #DBA901;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentas">
+   <children>
+      <TextField fx:id="GarantiaTField" layoutX="26.0" layoutY="158.0" prefHeight="25.0" prefWidth="72.0" promptText="GARANTIA" />
+      <ComboBox fx:id="MetPagoComboBox" layoutX="241.0" layoutY="158.0" prefWidth="150.0" promptText="METODO DE PAGO" />
+      <TextField fx:id="NombreTfield" alignment="CENTER" layoutX="14.0" layoutY="252.0" promptText="NOMBRE" />
+      <TextField fx:id="ApellidoTField" alignment="CENTER" layoutX="172.0" layoutY="252.0" promptText="APELLIDO" />
+      <TextField fx:id="DniTField" alignment="CENTER" layoutX="333.0" layoutY="252.0" promptText="DNI" />
+      <TextField fx:id="DireccionTField" alignment="CENTER" layoutX="172.0" layoutY="286.0" promptText="DIRECCION" />
+      <TextField fx:id="EmailTField" alignment="CENTER" layoutX="502.0" layoutY="252.0" promptText="E-MAIL" />
+      <TextField fx:id="TelefonoTField" alignment="CENTER" layoutX="14.0" layoutY="286.0" promptText="TELEFONO / CELULAR" />
+      <TextField fx:id="PrecioTField" alignment="CENTER" layoutX="569.0" layoutY="158.0" promptText="PRECIO DE VENTA" />
+      <AnchorPane layoutX="-2.0" layoutY="196.0" prefHeight="6.0" prefWidth="734.0" style="-fx-background-color: #FFBF00;" />
+      <Button layoutX="585.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#CrearVenta" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #FF0080;" text="REALIZAR VENTA" textFill="WHITE" />
+      <Text layoutX="26.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARCA: " />
+      <Text layoutX="26.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODELO:" />
+      <Text layoutX="26.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COLOR" />
+      <Text layoutX="241.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NUMERO DE MOTOR:" />
+      <Text layoutX="241.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NUMERO DE CHASIS:" />
+      <Text layoutX="241.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÑO DE FABRICACION:" />
+      <Text fx:id="MarcaText" fill="#04833f" layoutX="81.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEBROLLETE" wrappingWidth="148.9999918937683" />
+      <Text fx:id="ModeloText" fill="#04833f" layoutX="81.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEBROLLETE" wrappingWidth="148.9999918937683" />
+      <Text fx:id="ColorText" fill="#04833f" layoutX="81.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEBROLLETE" wrappingWidth="148.9999918937683" />
+      <Text fx:id="NumMotorText" fill="#04833f" layoutX="367.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEBROLLETE" wrappingWidth="148.9999918937683" />
+      <Text fx:id="NumChasisText" fill="#04833f" layoutX="367.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEBROLLETE" wrappingWidth="148.9999918937683" />
+      <Text fx:id="AnioFabText" fill="#04833f" layoutX="373.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHEBROLLETE" wrappingWidth="148.9999918937683" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="502.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icon_Automotor.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="14.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datos del comprador:" wrappingWidth="344.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="FechaTField" alignment="CENTER" layoutX="569.0" layoutY="206.0" promptText="FECHAS" />
+      <Text layoutX="106.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="años" />
+   </children>
+</AnchorPane>

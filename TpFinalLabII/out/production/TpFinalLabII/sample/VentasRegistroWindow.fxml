@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentaRegistro">
+   <children>
+      <TableView fx:id="TableVentas" layoutX="21.0" layoutY="24.0" prefHeight="559.0" prefWidth="971.0">
+        <columns>
+          <TableColumn fx:id="vehiVenta" prefWidth="129.0" text="Vehiculo" />
+          <TableColumn fx:id="nombreComprador" prefWidth="136.0" text="Nombre" />
+            <TableColumn fx:id="apellidoComprador" minWidth="9.0" prefWidth="101.0" text="Apellido" />
+            <TableColumn fx:id="dniComprador" prefWidth="102.0" text="DNI" />
+            <TableColumn fx:id="direccComprador" prefWidth="88.0" text="Direccion" />
+            <TableColumn fx:id="telComprador" prefWidth="97.0" text="Telefono" />
+            <TableColumn fx:id="fechaBaja" prefWidth="103.0" text="Fecha" />
+            <TableColumn fx:id="garantia" prefWidth="90.0" text="Garantia" />
+            <TableColumn fx:id="precioVenta" prefWidth="124.0" text="Precio" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #F2F2F2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMainMenu">
+   <children>
+      <MenuButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="105.0" text="Inicio">
+        <items>
+          <MenuItem fx:id="ClosesecionMenuItem" mnemonicParsing="false" onAction="#LogOut" text="Cerrar sesión" />
+          <MenuItem fx:id="ExitMenuItem" mnemonicParsing="false" onAction="#ExitButtonMenu" text="Exit" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="149.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="105.0" text="Vehiculos">
+         <items>
+            <MenuItem mnemonicParsing="false" text="0km" />
+            <MenuItem mnemonicParsing="false" text="Usados" />
+            <MenuItem mnemonicParsing="false" text="Importados" />
+            <MenuItem mnemonicParsing="false" text="Nacionales" />
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="286.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="116.0" text="Operaciones">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#OpenVentas" text="Venta" />
+            <MenuItem mnemonicParsing="false" onAction="#OpenCompra" text="Compra" />
+            <MenuItem mnemonicParsing="false" onAction="#OpenCargaStock" text="Nuevo Vehiculo" />
+         </items>
+      </MenuButton>
+      <Button layoutX="1146.0" layoutY="660.0" mnemonicParsing="false" onMouseClicked="#ExitButtonMenu" prefHeight="37.0" prefWidth="105.0" style="-fx-background-color: #DF0174;" text="EXIT" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ImageView fitHeight="149.0" fitWidth="356.0" layoutX="950.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icon_Automotor.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="Table" layoutX="107.0" layoutY="149.0" prefHeight="499.0" prefWidth="884.0" style="-fx-background-color: #FAFAFA;">
+        <columns>
+          <TableColumn fx:id="vehiculo" prefWidth="79.0" text="VEHICULO" />
+          <TableColumn fx:id="marca" prefWidth="112.0" text="MARCA" />
+            <TableColumn fx:id="modelo" prefWidth="119.0" text="MODELO" />
+            <TableColumn fx:id="color" prefWidth="109.0" text="COLOR" />
+            <TableColumn fx:id="cilindrada" prefWidth="110.0" text="CILINDRADA" />
+            <TableColumn fx:id="transmicion" prefWidth="104.0" text="TRANSMISION" />
+            <TableColumn fx:id="kilometraje" prefWidth="111.0" text="KILOMETRAJE" />
+            <TableColumn fx:id="precio" prefWidth="112.0" text="PRECIO" />
+        </columns>
+      </TableView>
+      <Button layoutX="107.0" layoutY="660.0" mnemonicParsing="false" onMouseClicked="#OpenFichaTecnica" prefHeight="32.0" prefWidth="131.0" text="FICHA TECNICA" />
+      <Button layoutX="253.0" layoutY="660.0" mnemonicParsing="false" onMouseClicked="#OpenModification" prefHeight="32.0" prefWidth="87.0" text="MODIFICAR" />
+      <MenuButton layoutX="425.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="116.0" text="Registros">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Stock" />
+            <MenuItem mnemonicParsing="false" onAction="#OpenRegistrosVenta" text="Ventas" />
+            <MenuItem mnemonicParsing="false" onAction="#OpenRegistroCompra" text="Compras" />
+         </items>
+      </MenuButton>
+      <Button layoutX="360.0" layoutY="660.0" mnemonicParsing="false" onMouseClicked="#OpenVentas" prefHeight="32.0" prefWidth="87.0" text="VENDER" />
+      <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="45.0" layoutY="355.0" onMouseClicked="#RellenarListInicio" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/reload.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerStock">
+   <children>
+      <TextField fx:id="TFieldMarca" alignment="CENTER" layoutX="197.0" layoutY="122.0" promptText="MARCA" />
+      <TextField fx:id="TFieldFecha" alignment="CENTER" layoutX="552.0" layoutY="122.0" promptText="AÑO DE FABRICACION" />
+      <TextField fx:id="TFieldNumMotor" alignment="CENTER" layoutX="733.0" layoutY="122.0" promptText="NUMERO DE MOTOR" />
+      <TextField fx:id="TFieldNumChasis" alignment="CENTER" layoutX="899.0" layoutY="122.0" promptText="NUMERO DE CHASIS" />
+      <Text fill="#c30000" layoutX="733.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Una vez confirmado este campo no podra ser modificado" textAlignment="CENTER" wrappingWidth="149.13671875">
+         <font>
+            <Font name="Corbel Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#c30000" layoutX="899.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Una vez confirmado este campo no podra ser modificado" textAlignment="CENTER" wrappingWidth="149.13671875">
+         <font>
+            <Font name="Corbel Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="TipoVehiCombBox" layoutX="14.0" layoutY="122.0" onAction="#SetearVisibles" prefWidth="150.0" promptText="TIPO DE VEHICULO" />
+      <TextField fx:id="TFieldModelo" alignment="CENTER" layoutX="367.0" layoutY="122.0" promptText="MODELO" />
+      <CheckBox fx:id="CheckUsado" layoutX="1085.0" layoutY="122.0" mnemonicParsing="false" onAction="#SetVisibleKilometro" text="USADO">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1074.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icon_Automotor.png" />
+         </image>
+      </ImageView>
+      <Text fill="#c31414" layoutX="497.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAMPOS OBLIGATORIOS">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutY="195.0" prefHeight="11.0" prefWidth="1280.0" style="-fx-background-color: #FFBF00; -fx-border-color: #F3F781;" />
+      <AnchorPane layoutY="-11.0" prefHeight="22.0" prefWidth="1280.0" style="-fx-background-color: #FFBF00; -fx-border-color: #F3F781;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icon_Automotor.png" />
+         </image>
+      </ImageView>
+      <Text fill="#15c21f" layoutX="14.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especificaciones técnicas">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="comboTransmi" layoutX="14.0" layoutY="247.0" prefHeight="25.0" prefWidth="121.0" promptText="TRANSMISION" />
+      <ComboBox fx:id="comboEmicion" layoutX="151.0" layoutY="247.0" onAction="#SetVisibleKilometro" prefHeight="29.0" prefWidth="152.0" promptText="ALIMENTACION" />
+      <TextField fx:id="TfieldColor" alignment="CENTER" layoutX="316.0" layoutY="247.0" prefHeight="26.0" prefWidth="129.0" promptText="COLOR" />
+      <TextField fx:id="TfieldOrigen" alignment="CENTER" layoutX="453.0" layoutY="247.0" promptText="PAIS DE ORIGEN" />
+      <TextField fx:id="TfieldCombustible" alignment="CENTER" layoutX="614.0" layoutY="247.0" promptText="COMBUSTIBLE" />
+      <TextField fx:id="TfieldTraccion" alignment="CENTER" layoutX="774.0" layoutY="247.0" promptText="TRACCION" />
+      <TextField fx:id="TfieldFrenoDelantero" alignment="CENTER" layoutX="936.0" layoutY="247.0" promptText="FRENO DELANTERO" />
+      <TextField fx:id="TfieldFrenoTracero" alignment="CENTER" layoutX="1100.0" layoutY="247.0" promptText="FRENO TRASERO" />
+      <TextField fx:id="TfieldLlantas" alignment="CENTER" layoutX="15.0" layoutY="299.0" promptText="LLANTAS" />
+      <TextField fx:id="TfieldCilindrada" alignment="CENTER" layoutX="173.0" layoutY="299.0" prefHeight="25.0" prefWidth="89.0" promptText="CILINDRADA" />
+      <TextField fx:id="TfieldRodado" alignment="CENTER" layoutX="272.0" layoutY="299.0" prefHeight="25.0" prefWidth="97.0" promptText="RODADO" />
+      <TextField fx:id="TfieldValvulas" alignment="CENTER" layoutX="379.0" layoutY="299.0" prefHeight="25.0" prefWidth="89.0" promptText="VALVULAS" />
+      <TextField fx:id="TfieldCFuerza" alignment="CENTER" layoutX="475.0" layoutY="299.0" prefHeight="25.0" prefWidth="89.0" promptText="C/FUERZAS" />
+      <TextField fx:id="Tfield0100" alignment="CENTER" layoutX="574.0" layoutY="299.0" prefHeight="25.0" prefWidth="108.0" promptText="0kmh a 100kmh" />
+      <TextField fx:id="TFieldKilometro" alignment="CENTER" layoutX="1085.0" layoutY="156.0" prefHeight="25.0" prefWidth="89.0" promptText="KILOMETRAJE" />
+      <TextField fx:id="TfieldCapTanque" alignment="CENTER" layoutX="832.0" layoutY="299.0" prefHeight="25.0" prefWidth="150.0" promptText="CAPACIDAD DEL TANQUE" />
+      <TextField fx:id="TfieldVelocidadMaxima" alignment="CENTER" layoutX="688.0" layoutY="299.0" prefHeight="25.0" prefWidth="135.0" promptText="VELOCIDAD MAXIMA" />
+      <TextField fx:id="TfieldConsumoCiudad" alignment="CENTER" layoutX="987.0" layoutY="299.0" prefHeight="25.0" prefWidth="135.0" promptText="CONSUMO CIUDAD" />
+      <TextField fx:id="TfieldConsumoRuta" alignment="CENTER" layoutX="1130.0" layoutY="299.0" prefHeight="25.0" prefWidth="135.0" promptText="CONSUMO RUTA" />
+      <TextField fx:id="TfieldLargo" alignment="CENTER" layoutX="18.0" layoutY="348.0" prefHeight="25.0" prefWidth="97.0" promptText="LARGO" />
+      <TextField fx:id="TfieldAncho" alignment="CENTER" layoutX="125.0" layoutY="348.0" prefHeight="25.0" prefWidth="89.0" promptText="ANCHO" />
+      <TextField fx:id="TfieldAlto" alignment="CENTER" layoutX="221.0" layoutY="348.0" prefHeight="25.0" prefWidth="89.0" promptText="ALTO" />
+      <TextField fx:id="TfieldPrecioDolares" alignment="CENTER" layoutX="325.0" layoutY="348.0" prefHeight="25.0" prefWidth="135.0" promptText="PRECIO EN DOLARES" />
+      <TextField fx:id="PrecioPesos" alignment="CENTER" layoutX="468.0" layoutY="348.0" prefHeight="25.0" prefWidth="135.0" promptText="PRECIO EN PESOS" />
+      <AnchorPane layoutY="388.0" prefHeight="11.0" prefWidth="1280.0" style="-fx-background-color: #FFBF00; -fx-border-color: #F3F781;" />
+      <Text fx:id="TextConfort" fill="#15c21f" layoutX="20.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confort">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="CheckABS" layoutX="955.0" layoutY="350.0" mnemonicParsing="false" text="ABS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckCierreCentra" layoutX="21.0" layoutY="545.0" mnemonicParsing="false" text="CIERRE CENTRALIZADO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckAireAcon" layoutX="20.0" layoutY="511.0" mnemonicParsing="false" text="AIRE ACONDICIONADO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckBloqPuerta" layoutX="242.0" layoutY="545.0" mnemonicParsing="false" text="AUTOBLOQUEO PUERTAS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckCristElectico" layoutX="242.0" layoutY="511.0" mnemonicParsing="false" text="LEVANTA CRISTALES ELECTRICO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckUSB" layoutX="240.0" layoutY="615.0" mnemonicParsing="false" text="USB">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckBluetooth" layoutX="240.0" layoutY="580.0" mnemonicParsing="false" text="BLUETOOTH">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckGPS" layoutX="22.0" layoutY="580.0" mnemonicParsing="false" text="GPS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckMp3" layoutX="21.0" layoutY="615.0" mnemonicParsing="false" text="MP3">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckCamTrasera" layoutX="21.0" layoutY="651.0" mnemonicParsing="false" text="CAMARA TRASERA">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckTecSolar" layoutX="240.0" layoutY="651.0" mnemonicParsing="false" text="TECHO SOLAR">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckVeloCruce" layoutX="21.0" layoutY="685.0" mnemonicParsing="false" text="VELOCIDAD CRUCERO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="TfieldCantPuertas" alignment="CENTER" layoutX="774.0" layoutY="348.0" promptText="CANTIDAD DE PUERTAS" />
+      <TextField fx:id="TfieldDireccion" alignment="CENTER" layoutX="614.0" layoutY="348.0" promptText="DIRECCION" />
+      <ComboBox fx:id="EstiloAutoCombBox" layoutX="15.0" layoutY="449.0" prefHeight="25.0" prefWidth="124.0" promptText="ESTILO" />
+      <CheckBox fx:id="CheckBaul" layoutX="803.0" layoutY="544.0" mnemonicParsing="false" text="BAUL">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckTableroElect" layoutX="803.0" layoutY="510.0" mnemonicParsing="false" text="TABLERO ELECTRICO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckEncendElectrico" layoutX="801.0" layoutY="614.0" mnemonicParsing="false" text="ENCENDIDO ELECTRICO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="CheckPatada" layoutX="801.0" layoutY="579.0" mnemonicParsing="false" text="PATADA">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <ComboBox fx:id="EstiloMotoCombBox" layoutX="801.0" layoutY="449.0" prefHeight="25.0" prefWidth="124.0" promptText="ESTILO" />
+      <Button fx:id="ButonGuardar" layoutX="1130.0" layoutY="660.0" mnemonicParsing="false" onMouseClicked="#NuevoVehiculo" prefHeight="32.0" prefWidth="124.0" style="-fx-background-color: #5FB404;" text="GUARDAR" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="ButtonConfirm" layoutX="1131.0" layoutY="624.0" mnemonicParsing="false" onMouseClicked="#MofificacionesButton" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: #04B404;" text="CONFIRMAR" textFill="WHITE" />
+   </children>
+</AnchorPane>
